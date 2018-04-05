@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ex. 2 de BD</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>Exercício 2 de banco de dados</h1>
+	<ol>
+		<li>
+			<p>
+				Explique a diferença entre conjunto de entidades Fortes e Fracas. Do que é composta a Chave Primária de uma Entidade Fraca?
+			</p>
+			<div class="answer">
+				<p>
+					Entidades fortes possuem atributos o suficiente para formar sua chave primária.
+				</p>
+				<p>
+					Entidades fracas não possuem atributos o suficiente para formar sua chave primária, nesses casos sua chave primária é comporta da chave estrangeira que compõe seu relacionamento com outra entidade.
+				</p>
+			</div>
+		</li>
+		<li>
+			<p>
+				Quais os 3 tipos de notações que podem ser utilizadas para descrever a cardinalidade de um diagrama entidade relacionamento? Responda essa pergunta por meio de um relacionamento simples 1 para N entre dois conjuntos de entidades;
+			</p>
+			<div class="answer">
+				<img src="img2.png" align="top">
+			</div>
+		</li>
+		<li>
+			<p>Explique a diferença entre participação Total e Parcial;</p>
+			<div class="answer">
+				<p>
+					Participação total é quando todas as entidades de uma tabela têm um relacionamento com qualquer entidade de uma outra tabela.
+				</p>
+				<p>
+					Participação parcial é quando nem todas as entidades de uma tabela têm relacionamento com qualquer entidade de uma outra tabela.
+				</p>
+			</div>
+		</li>
+		<li>
+			<p>
+				Desenhe a hierarquia generalização-especialização para uma empresa de vendas de veículos. A companhia vende motocicletas, carros para passageiros, caminhonetes e ônibus. Baseado no conceito generalização-especialização justifique a colocação dos atributos em cada nível hierárquico. Explique por que não poderiam ser colocados alguns atributos no conjunto de entidades de nível superior;
+			</p>
+			<div class="answer">
+				<img src="img3.png" align="top">
+				<p>
+					Foram colocados os atributos relevantes para cada tipo de veículo, por exemplo: Todos os veículos possuem cilindradas, porém esta característica é apresentada normalmente na compra de motos, enquanto que em carros adota-se a cavalaria, e em caminhonetes o torque.
+				</p>
+			</div>
+		</li>
+		<li>
+			<p>
+				Construa um diagrama E-R para um hospital com um conjunto de pacientes e um corpo médico. Cada paciente faz no mínimo uma consulta e cada consulta é direcionada exatamente a um único paciente. Cada consulta é realizada obrigatoriamente por um médico, mas médicos podem ou não realizar consultas neste hospital (existem médicos em cargos administrativos). Cada paciente pode ter um médico responsável por ele, mas nem todo médico do hospital é responsável por pacientes. Os pacientes possuem os seguintes dados: RG, CPF, endereço (mostrado em detalhes) e vários telefones de contato. A consulta possui um id, data de realização, tipo de consulta e resultado. Cada médico possui apenas CRM, telefone celular e sua especialização.
+			</p>
+			<p>
+				Obs: utilize da notação tradicional para fazer este exercício e represente as cardinalidades
+			min e max por meio de participações parciais ou totais.
+			</p>
+			<div class="answer">
+				<img src="img4.png" align="top">
+			</div>
+		</li>
+		<li>
+			<p>
+				Um cliente resolveu automatizar o acesso aos dados de sua empresa. Após levantamento de requisitos, o projetista forneceu a seguinte descrição do “minimundo”. A empresa está organizada em departamentos cheio de empregados: cada departamento tem seu número e nome únicos, tem diversas localizações e possui um empregado que o gerencia (tem-se a data que o empregado começou a gerenciar). Um departamento pode ou não controlar projetos também cheio de empregados, mas todo projeto deve estar alocado obrigatoriamente em um departamento. Cada projeto tem um nome, um número único e uma localização. É preciso armazenar o nome (em detalhes), CPF, endereço, salário, sexo, data de nascimento e idade do empregado. Um empregado está alocado obrigatoriamente a um departamento, mas trabalham em diversos projetos que não são controlados, necessariamente, pelo mesmo departamento. Controla-se o número de horas semanais que um empregado trabalha em cada projeto. Controla-se também o supervisor direto de cada empregado. Precisa-se também controlar os dependentes de cada empregado para fins de seguro. Cada empregado não precisa necessariamente ter um dependente. Guarda-se o nome, sexo, data de nascimento e o parentesco de cada dependente.
+			</p>
+			<p>
+				Obs: utilize da notação tradicional para fazer este exercício e represente as cardinalidades min e max por meio de participações parciais ou totais.
+			</p>
+			<div class="answer">
+				<img src="img5.png" align="top">
+			</div>
+		</li>
+		<li>
+			<p>
+				Um Zoológico possui no mínimo um animal e um animal pertence a apenas um zoológico. Represente este relacionamento utilizando os conceitos de Cardinalidade Mínima e Máxima. O relacionamento entre Zoológico e Animal (lendo da esquerda para direita) é uma associação opcional ou obrigatória? Explique.
+			</p>
+			<div class="answer">
+				<img src="img6.png" align="top">
+				<p>
+					Obrigatória, pois a cardinalidade mínima é 1, ou seja, o zoológico <strong>DEVE</strong> possuir pelo menos 1 animal.
+				</p>
+			</div>
+		</li>
+		<li>
+			<p>
+				Considere o diagrama ER mostrado na figura abaixo como parte de um banco de dados BANCO. Cada banco pode ter múltiplas agências e cada agência pode conter múltiplas contas e empréstimos.
+			</p>
+			<p>a) Liste as entidades (não fracas) do diagrama ER;</p>
+			<div class="answer">
+				<ul>
+					<li>Banco</li>
+					<li>Conta</li>
+					<li>Empréstimo</li>
+					<li>Cliente</li>
+				</ul>
+			</div>
+			<p>b) Há alguma entidade fraca? Se sim, dê o seu nome, chave parcial e o relacionamento identificador;</p>
+			<div class="answer">
+				<p>
+					Sim, "AGENCIA_BANCARIA".
+				</p>
+				<p>
+					Chave parcial: "NumAgencia".
+				</p>
+				<p>
+					Relacionamento identificador: AGENCIA.
+				</p>
+			</div>
+			<p>c) Quais restrições o relacionamento identificador da entidade fraca especifica nesse diagrama?</p>
+			<div class="answer">
+				<p>
+					<strong>TODAS</strong> as agências bancárias <span class="sublinhado">devem</span> pertencer a especificamente <span class="sublinhado">um</span> banco.
+				</p>
+			</div>
+			<p>d) Liste os nomes de todos os relacionamentos e especifique a restrição (min, max) em cada participação de uma entidade em um relacionamento. Justifique suas escolhas;</p>
+			<div class="answer">
+				<ul>Relacionamentos:
+					<li>
+						<p>AGENCIA</p>
+						<p>BANCO</p>
+						<ul>Restrição:
+							<li>Min: 1</li>
+							<li>Max: 1</li>
+						</ul>
+						<p>AGENCIA_BANCARIA</p>
+						<ul>Restrição:
+							<li>Min: 1</li>
+							<li>Max: N</li>
+						</ul>
+					</li>
+					<li>
+						<p>CONTAS</p>
+						<p>AGENCIA_BANCARIA</p>
+						<ul>Restrição:
+							<li>Min: 1</li>
+							<li>Max: 1</li>
+						</ul>
+						<p>CONTA</p>
+						<ul>Restrição:
+							<li>Min: 0</li>
+							<li>Max: N</li>
+						</ul>
+					</li>
+					<li>
+						<p>EMPRESTA</p>
+						<p>AGENCIA_BANCARIA</p>
+						<ul>Restrição:
+							<li>Min: 1</li>
+							<li>Max: 1</li>
+						</ul>
+						<p>EMPRESTIMO</p>
+						<ul>Restrição:
+							<li>Min: 0</li>
+							<li>Max: N</li>
+						</ul>
+					</li>
+					<li>
+						<p>C-C (Conta-Cliente)</p>
+						<p>CONTA</p>
+						<ul>Restrição:
+							<li>Min: 0</li>
+							<li>Max: M</li>
+						</ul>
+						<p>CLIENTE</p>
+						<ul>Restrição:
+							<li>Min: 1</li>
+							<li>Max: N</li>
+						</ul>
+					</li>
+					<li>
+						<p>E-C (Empréstimo-Cliente)</p>
+						<p>EMPRESTIMO</p>
+						<ul>Restrição:
+							<li>Min: 0</li>
+							<li>Max: M</li>
+						</ul>
+						<p>CLIENTE</p>
+						<ul>Restrição:
+							<li>Min: 1</li>
+							<li>Max: N</li>
+						</ul>
+					</li>
+				</ul>
+				<p>
+					Justificativa de todos encontra-se na análise do diagrama apresentado abaixo, análise das participações totais ou parciais e especificações de cardinalidade.
+				</p>
+				<p>
+					Observação: As restrições indicadas abaixo da entidade se referem as restrições da mesma para a entidade relacionada, ou seja, por exemplo, as restrições abaixo de "BANCO" em "AGENCIA", indicam que toda "AGENCIA_BANCARIA" deve ter no mínimo 1 e no máximo 1 banco. Por outro lado, as restrições abaixo de "AGENCIA_BANCARIA" indicam que todo banco deve ter no mínimo 1, mas pode ter no máximo N, agências bancárias.
+				</p>
+			</div>
+			<p>e) Suponha que cada cliente deva ter, pelo menos, uma conta, mas está limitado ao máximo de dois empréstimos de cada vez, e que uma agência bancária não pode ter mais de mil empréstimos. Como fazer as restrições (min, max) para esta situação?</p>
+			<div class="answer">
+				<ul>
+					<li>Cada cliente deve ter pelo menos uma conta:
+						<p>
+							Ao invés de usar uma única linha entre "CLIENTE" e "CONTA", usariam-se duas linhas paralelas, indicando participação total.
+ 						</p>
+					</li>
+					<li>Limite de dois empréstimos por cliente:
+						<p>
+							Poderia ser indicado com um "2" no lugar de "M", na ligação entre "EMPRESTIMO" e o relacionamento "E-C".
+						</p>
+					</li>
+					<li>Limite de mil empréstimos por agência:
+						<p>
+							Como na última questão, porém usando "1000" no lugar de "N".
+						</p>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<img src="img1.png" width="750" height="512">
+			</div>
+		</li>
+	</ol>
+</body>
+</html>

@@ -1,0 +1,43 @@
+* {
+	box-sizing:border-box;
+	max-width: 1024px;
+	margin:25px auto;
+	padding:0px;
+	font-family: Open Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+	font-size: 18px;
+}
+
+body {
+	background-color: #F8F8FF;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+p {
+	line-height: 26px;
+}
+
+.answer {
+	background-color: #FFFFFF;
+	padding: 10px 20px 10px 20px;
+	box-shadow: 0px 0px 1px 1px;
+}
+
+.answer p {
+	margin: 20px 0px 20px 0px;
+}
+
+.answer ul {
+	padding: 0px 20px 0px 20px;
+}
+
+.sublinhado {
+	border-bottom: 1px solid black;
+}
+
+.answer ul li p, ul li ul, ul li ul li {
+	margin: 10px 0px 10px 0px;
+}
